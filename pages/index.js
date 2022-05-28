@@ -67,7 +67,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='container mx-auto flex-1 p-5'>
-        <div className='mb-10 flex justify-between items-center pr-10 pt-2'>
+        <div className='mb-5 flex justify-between items-center pr-10 pt-2'>
           <h1 className={styles.sooth}>HELLO-WORLD</h1>
           <div className='flex space-x-4 items-center'>
             <h1 className='text-[#38E8C6]'>Address: </h1>
@@ -78,6 +78,7 @@ export default function Home() {
             px-5 text-sm text-[#38E8C6] py-1' onClick={fcl.unauthenticate}>Logout</button>}
           </div>
         </div>
+        <hr className='border-[#38E8C6]'/>
         <div className='flex items-center justify-center pt-28'>
           <div className='space-y-5 p-2 w-1/3'>
               <button onClick={getGreeting} className="border rounded-lg py-2 text-sm px-5 border-[#38E8C6] text-blue-900 font-bold bg-[#38E8C6]">Get Greeting</button>
@@ -89,9 +90,18 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className='container mx-auto'>
-        <img src='/city.svg' alt='city'/>
-      </footer>
+      <footer>
+      <img className="w-full" src='/city.svg' alt='city'/>
+      <div className='bg-black flex pt-10 pb-5 justify-center text-white'>
+        <div className='w-[80%] flex justify-between items-center'>
+          <div className='font-jet text-xs'>2022. All rights reserved.</div>
+          <a className='flex items-center text-[#38E8C6] hover:underline hover:underline-offset-2 space-x-1 font-poppins text-lg' href='https://academy.ecdao.org/'><h1>Emerald</h1> 
+          <img src='/EC_Education.png' width={40} alt='city'/>
+           <h1>Academy</h1></a>
+          <div className='font-jet text-xs'>Created by <a href='https://discord.gg/emeraldcity' className='text-[#38E8C6] hover:underline hover:underline-offset-2 '>Emerald City DAO</a></div>
+        </div>
+      </div>
+    </footer>
     </div>
   )
 }
